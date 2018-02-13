@@ -22,7 +22,10 @@ method = possibles.get(type)
 if not method:
      raise NotImplementedError("Method %s not implemented" % type)
 
-    
-x = int(input())
-y = int(input())
-print(method(x,y))
+
+try:
+	x = int(input())
+	y = int(input())
+	print(method(x,y))
+except ValueError:
+	print("Invalid input")
